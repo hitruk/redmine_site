@@ -1,0 +1,23 @@
+# log
+geckhodriver.log
+*.log
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# IDEs
+.idea
+
+# pycache
+__pycache__
+.pytest_cache
+
+# dising
+.~lock.test_dis.ods#
+test_dis.ods
+
+# files
+1.py
+2.py
