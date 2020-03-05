@@ -18,11 +18,9 @@ def browser():
 # database
 @pytest.fixture
 def database():
-    @pytest.fixture
-    def database():
-        cnx = psycopg2.connect(user='redmine', password='q1w2', database='redmine', host='192.168.100.16')
-        cursor = cnx.cursor()
-        yield cursor
-        # cnx.commit()
-        cursor.close()
-        cnx.close()
+    conn = psycopg2.connect(user='redmine', password='q1w2', database='redmine', host='192.168.1.3')
+    cursor = conn.cursor()
+    yield cursor
+    conn.commit()
+    cursor.close()
+    conn.close()
