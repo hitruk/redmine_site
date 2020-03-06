@@ -1,5 +1,5 @@
 import pytest
-from page_object.registration import PassRegistration
+from page_object.pass_registration import PassRegistration
 from page_object.result_registration import ResultRegistration
 
 
